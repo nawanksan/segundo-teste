@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salario = parseInt(prompt("digite seu salario:"));
+        let salarioInss;
+        let salarioFinal;
+        
+        if(salario <= 1302){
+            salarioInss = 0.075 * salario
+            salarioFinal = salario - salarioInss
+        }
+
+        if(salario >= 1302.01 && salario <  2571.29){
+            salarioInss = 0.09 * salario
+            salarioFinal = salario - salarioInss
+        }
+
+        if(salario >= 2571.30 && salario <= 3856.94){
+            salarioInss = 0.12 * salario
+            salarioFinal = salario - salarioInss
+        }
+
+        if(salario >= 3856.95 && salario <= 7507.49){
+            salarioInss = 0.14 * salario
+            salarioFinal = salario - salarioInss
+        }
+
+        document.write(`salario: ${salario} salario Final: ${salarioFinal}`)
+    </script>
+</body>
+</html>

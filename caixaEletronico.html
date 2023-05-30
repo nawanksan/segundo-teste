@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Digite os digitos da conta"));
+        let saldo = parseInt(prompt("Digite seu saldo"));
+        let menu = prompt("1-Sacar\n2-depositar");
+
+        if(menu == 1){
+            if(saldo <= 0){
+                document.write("conta estourada<br>");
+                
+            }else{
+                let valorSacar = parseInt(prompt("digite o valor"));
+
+                if(valorSacar > saldo){
+                    document.write("Saldo insuficiente<br>")
+                    document.write("Saldo: "+saldo)
+                }else{
+                    saldo -= valorSacar
+                    document.write("Saque feito");
+                    document.write("<br>Saldo: "+saldo+"<br>");
+                    if(saldo == 0){
+                        document.write("conta estourada")
+                    }
+                }
+            }
+            
+        }
+
+        if(menu == 2){
+            let ValorDepositar = parseInt(prompt("digite o valor:"));
+            saldo += ValorDepositar;
+            document.write("Deposito feito! <br> Saldo: "+saldo);
+        }
+        
+    </script>
+</body>
+</html>
